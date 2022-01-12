@@ -3,9 +3,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 
 A simple site covering a range of my background and so on.
-personal site. Includes a (configurable) parallax background effect, Poptrox-powered
-lightbox gallery, a bunch of pre-styled elements, and Sass sources for the Sass-inclined.
 
 Images belong Jon Hicks!
 
-PS: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
+note: Not sure how to get that contact form working? Give formspree.io a try (it's awesome).
