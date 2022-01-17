@@ -26,8 +26,7 @@
 						<header class="major">
 							<h2>Burp Suite.</h2>
 						</header>
-						<p>Burp can capture and manipulate the traffic between you and the web server you are looking at. Once captured this traffic can be examined and altered or passed to one of the other tools inside the Brup Suite.</p>
-            					<p>Burp is available at diffent levels, this considers the free or community version which comes with some limitations.</p>
+						<p>Burp can capture and manipulate the traffic between you and the web server you are looking at. Once captured this traffic can be examined and altered or passed to one of the other tools inside the Brup Suite. Burp is available at diffent levels, this considers the free or community version which comes with some limitations.</p>
 					</section>
 
 				<!-- Two -->
@@ -40,6 +39,14 @@
 						<p><strong>Compare -</strong> provides camparrison of data at different levels.</p>
 						<p><strong>Sequencer -</strong> evaluates randomness in things like cookie values.</p>
 						<p><strong>Extender -</strong> for loading external extensions or the inclusion of internal code segments.</p>
+					</section>
+				
+				<!-- Three -->
+					<section id="three">
+						<h2>Set up required</h2>
+						<p><strong>Redirecting browser traffic -</strong> In Firefox FoxyProxy should be deployed for Burp and the traffic must pass through the port established by IP 127.0.0.1:8080</p>
+						<p><strong>Cerification -</strong> When Proxy is active go to HTTP://burp/cert and download cacert.der. Then in firefox search type about preferences search for certificates, find View Certificates and Import, find the downloded file then tick trust this CA to identify websites.</p>
+						<p><strong>Proxy scoping -</strong> to stop all traffic being recorded by the intercept set the scope for the project. Target>scope set the traget IP, then in Proxy options>intercept client request check 'And URL is in target scope.</p>
 					</section>
 			</div>
 
