@@ -1,1 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Linux</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Linux</strong>, the framework<br />
+					under which most of the tools we will be using opperates.</h1>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Linux.</h2>
+						</header>
+						<p>Many different versions of Linux can be found however at the core of all of them is the terminal and the Bash shell. The format of the commands is usually (command -option argument). All Linux varients come with this.</p>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Bash Commands</h2>
+						<p><strong>pwd -</strong> displays the current working directory.</p>
+						<p><strong>cd -</strong> change directory allows us to move around the file structure. (/directoryname) moves us down. (..) moves us to the home directory.</p>
+						<p><strong>ls -</strong> lists file and sub directories. (-a) allow us to see all files including hidden. (-l) add user groups and ownership to the list. (-t) will sort the optput by created or last used. Note that directory names that contain a space must be enclosed in quotes</p>
+						<p><strong>mkdir -</strong> adds a new sub directory to your current location. You can also specify the full path of the directory you want to make (/home/username/newdir.</p>
+						<p><strong>rmdir -</strong> removes a directory. (-ri) will also remove any files in the directory asking for conformation for each one. (-r) will remove all the files without asking for conformation.</p>
+						<p><strong>mv -</strong> renames a file you must specify current name and the name you want to change it to. mv can also move a file by specifing the file name and the subdirectory.</p>
+						<p><strong>cp -</strong> will copy a file you must specify the file name and the sub directory name.</p>
+            <p><strong>rm -</strong> will remove or delete files by naming them or (*) to delete all files in the directory.</p>
+            <p><strong>ln -</strong> will create links to the file either hard they will retain a copy of the file if it is deleted or soft in which case they will not retain a copy. Usage ln root/somedir/some.file hardlink or softlink.</p>
+            <p><strong>stat -</strong> will show the attributes of a file.</p>
+            <p><strong>du -b -</strong> will show the size of a file in bytes.</p>
+            <p><strong>wc -</strong> will show the line count of a file and (-m) will give the word count .</p>
+            <p><strong>touch -</strong> can be used to change the date and time stamps of a file.</p>
+            <p><strong>cmp -</strong> compares two file if they are identical it will report nothing if some difference exists it will report only the first occurance of a difference.</p>
+            <p><strong>comm -</strong> this will produce a line by line comparison in three columns (only in first file/only in second file/in both files).</p>
+            <p><strong>diff -</strong> again this will compare to files but can also be used to compare two directories.</p>
+            <p><strong>find -</strong> Example find DirectoryName -type f -name FileName. The DirectoryName is the is the starting point in the file structure, -type f tells us we are searching for a file -name is the file we are looking for. This command has a lot of options available.</p>
+            <p><strong>cat -</strong> Displays the contence of one or more text files. (| less) will page the output if it is to long to read in one go.</p>
+            <p><strong>head & tail -</strong> these will optput the last or first 10 lines of a file.</p>
+            <p><strong>nl -</strong> this will list the file with line numbers (-v #) will set the start number (-b t) will skip over empty lines.</p>
+        </section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="actions">
+						<li><a href="Cyber.html" class="button">Back</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
 
