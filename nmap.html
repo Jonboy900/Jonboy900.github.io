@@ -27,6 +27,7 @@
 							<h2>Nmap.</h2>
 						</header>
 						<p>By using IP packets it trys ways of determing what hosts are available on a network. It can futher discover what opperating systems are in use and what services might be available. Available as a command line tool or with an interface (Zenmap). Ncat is a flexible data transfer tool. Ndiff a utility for comparing results. Nping is a packet generation and response analysis tool.</p>
+						<p>The sections below cover just some of the switches that can be deloped by Nmap.</p>	
 					</section>
 
 				<!-- Two -->
@@ -38,7 +39,7 @@
             					<p><strong>TCP SYN Ping -</strong> -PS sends empty TCP packets witht the SYN flag set to test for a three way handshake but even an RST response tells us the port is active.</p>
             					<p><strong>TCP ACK Ping -</strong> -PA by sending an ACK most hosts will respond with a RST as no connection is established. This proves that the port is active and listening.</p>
             					<p><strong>UDP Ping -</strong> -PU a normally empty packet is sent to test for a response, note firewalls often ignore UDP and allow port detection.</p>
-							<p><strong>others -</strong> a range of other switches exist on top of the ones above.</p>
+						<p><strong>others -</strong> a range of other switches exist on top of the ones above.</p>
 					</section>
 				<!-- Three -->
 					<section id="three">
@@ -52,15 +53,19 @@
 					</section>
 				<!-- Four -->
 					<section id="four">
-						<h2>Switches</h2>
-						<p><strong>Basic Scan -</strong> nmap <target ip>.</p>
-					  	<p><strong>TCP SYN ping -</strong> nmap -PS <target ip>.</p>
-            					<p><strong>UDP ping -</strong> nmap -PU <target ip>.</p>
-            					<p><strong>Service Detection -</strong> nmap -sV <target ip>.</p>
-            					<p><strong>Opperating system Detection -</strong> nmap -O <target ip>.</p>
-            					<p><strong>? -</strong> command.</p>
+						<h2>Port Scanning Switches</h2>
+						<p><strong>TCP SYN scan -</strong> -sS never completing the handshake this is fast and stealthy.<target ip>.</p>
+					  	<p><strong>TCP Connect scan -</strong> -sT nmap will complete the connection to the open port but this takes longer and the traget system is likly to log the cannection.</p>
+            					<p><strong>UDP scan -</strong> -sU as open and filtred UDP ports rarely send any response this can be a very slow scan.</p>
+            					<p><strong>TCP NULL, Fin and Xmas scans -</strong> -sN -sF -sX nmap sets varrious flags to elicite some response fromt the target and can bypass some firewalls.</p>
+            					<p><strong>TCP ACK scan -</strong> nmap uses this scan to map firewall rulesets -O <target ip>.</p>
+            					<p><strong>Others -</strong> nmap has a range of other specialized scans beyond the above list</p>
 					</section>
-
+				<!-- Five -->
+					<section id="five">
+						<h2>Service and OS detection switches</h2>
+						<p><strong>Version Detection -</strong> -sV nmap looks for the services that are running on a port.</p>
+					</section>
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
