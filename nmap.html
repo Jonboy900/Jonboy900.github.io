@@ -14,7 +14,7 @@
 				<div class="inner">
 					<a href="index.html" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
 					<h1><strong>Nmap</strong>, the network <br />
-					mapping tool.</h1>
+					mapping tool and port scanner.</h1>
 				</div>
 			</header>
 
@@ -26,11 +26,32 @@
 						<header class="major">
 							<h2>Nmap.</h2>
 						</header>
-						<p>blurb.</p>
+						<p>By using IP packets it trys ways of determing what hosts are available on a network. It can futher discover what opperating systems are in use and what services might be available. Available as a command line tool or with an interface (Zenmap). Ncat is a flexible data transfer tool. Ndiff a utility for comparing results. Nping is a packet generation and response analysis tool.</p>
 					</section>
 
 				<!-- Two -->
 					<section id="two">
+						<h2>Host Discovery Switches</h2>
+						<p><strong>Basic Scan -</strong> nmap <target ip>.</p>
+					  	<p><strong>List Scan -<strong> -sL list each host of the specified network and a reverse DNS lookup to learn the hosts names.</p>
+            					<p><strong>Ping Scan or Ping Sweep -</strong> -sn turns off the port scanning and list those hosts that responded to the host discovery probes.</p>
+            					<p><strong>TCP SYN Ping -</strong> -PS sends empty TCP packets witht the SYN flag set to test for a three way handshake but even an RST response tells us the port is active.</p>
+            					<p><strong>TCP ACK Ping -</strong> -PA by sending an ACK most hosts will respond with a RST as no connection is established. This proves that the port is active and listening.</p>
+            					<p><strong>UDP Ping -</strong> -PU a normally empty packet is sent to test for a response, note firewalls often ignore UDP and allow port detection.</p>
+							<p><strong>others -</strong> a range of other switches exist on top of the ones above.</p>
+					</section>
+				<!-- Three -->
+					<section id="three">
+						<h2>Port States</h2>
+						<p><strong>Open -</strong> the port is activly receiving (TCP/UDP/SCTP) <target ip>.</p>
+					  	<p><strong>Closed -</strong> the port is accessable but no application is listening.<target ip>.</p>
+            					<p><strong>Filtered -</strong> nmap can not determine if the port is open or closed.<target ip>.</p>
+            					<p><strong>Unfiltered -</strong> the port is accesible but Nmap is unable to detect if the port is open or closed.<target ip>.</p>
+						<p><strong>Open/filtered -</strong> nmap can not determine if the port is open or filtered.</p>
+            					<p><strong>Closed/filtered -</strong> nmap is unsure if the port is closed or filtered.</p>
+					</section>
+				<!-- Four -->
+					<section id="four">
 						<h2>Switches</h2>
 						<p><strong>Basic Scan -</strong> nmap <target ip>.</p>
 					  	<p><strong>TCP SYN ping -</strong> nmap -PS <target ip>.</p>
