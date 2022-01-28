@@ -58,15 +58,24 @@
 				<!-- Four -->
 					<section id="four">
 						<h2>Port Scanning Switches</h2>
+						<p><strong>all ports -</strong> (-p-) scan all ports.</p>
+						<p><strong>port range -</strong> (-p1-1023) scan all ports from 1 to 1023.</p>
+						<p><strong>100 common ports -</strong> (-F) nmap wil scan the 100 most common ports.</p>
+						<p><strong>scan ports in order -</strong> (-r) nmap will scan the ports in consecutive order.</p>
+						<p><strong>scan speed -</strong> (-T0-5) -T0 is the slowest and least likly to be detected while -T5 is very fast but might be unreliable.</p>
+					</section>
+				<!-- Five -->
+					<section id="five">
+						<h2>Port Scanning Types</h2>
 						<p><strong>TCP SYN scan -</strong> (-sS) never completing the handshake this is fast and stealthy.<target ip>.</p>
 					  	<p><strong>TCP Connect scan -</strong> (-sT) nmap will complete the connection to the open port but this takes longer and the traget system is likly to log the cannection.</p>
             					<p><strong>UDP scan -</strong> (-sU) as open and filtred UDP ports rarely send any response this can be a very slow scan.</p>
             					<p><strong>TCP NULL, Fin and Xmas scans -</strong> (-sN) (-sF) (-sX) nmap sets varrious flags to elicite some response fromt the target and can bypass some firewalls.</p>
-            					<p><strong>TCP ACK scan -</strong> nmap uses this scan to map firewall rulesets.</p>
+            					<p><strong>TCP ACK scan -</strong> (-sA) nmap uses this scan to map firewall rulesets.</p>
             					<p><strong>Others -</strong> nmap has a range of other specialized scans beyond the above list</p>
 					</section>
-				<!-- Five -->
-					<section id="five">
+				<!-- Six -->
+					<section id="six">
 						<h2>Service and OS detection switches</h2>
 						<p><strong>Version Detection -</strong> (-sV) nmap looks for the services that are running on a port.</p>
 					</section>
