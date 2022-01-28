@@ -34,11 +34,15 @@
 					<section id="two">
 						<h2>Host Discovery Switches</h2>
 						<p><strong>Basic Scan -</strong> nmap <target ip>.</p>
-					  	<p><strong>List Scan -<strong> -sL list each host of the specified network and a reverse DNS lookup to learn the hosts names.</p>
-            					<p><strong>Ping Scan or Ping Sweep -</strong> -sn turns off the port scanning and list those hosts that responded to the host discovery probes.</p>
-            					<p><strong>TCP SYN Ping -</strong> -PS sends empty TCP packets witht the SYN flag set to test for a three way handshake but even an RST response tells us the port is active.</p>
-            					<p><strong>TCP ACK Ping -</strong> -PA by sending an ACK most hosts will respond with a RST as no connection is established. This proves that the port is active and listening.</p>
-            					<p><strong>UDP Ping -</strong> -PU a normally empty packet is sent to test for a response, note firewalls often ignore UDP and allow port detection.</p>
+					  	<p><strong>List Scan -<strong> (-sL) list each host of the specified network and a reverse DNS lookup to learn the hosts names -n will supress the DNS lookup. Nmap will not actually scan the port</p>
+            					<p><strong>Ping Scan or Ping Sweep -</strong> (-sn) turns off the port scanning and list those hosts that responded to the host discovery probes.</p>
+            					<p><strong>TCP SYN Ping -</strong> (-PS) sends empty TCP packets witht the SYN flag set to test for a three way handshake expecting a SYN/ACK from a live port but even an RST response tells us the port is active.</p>
+            					<p><strong>TCP ACK Ping -</strong> (-PA) by sending an ACK most hosts will respond with a RST as no connection is established. This proves that the port is active and listening.</p>
+            					<p><strong>UDP Ping -</strong> (-PU) a normally empty packet is sent to test for a response, we would not normally expect an active port to respond but if the port is closed we will get an ICMP unreachable packet. Note firewalls often ignore UDP and allow port detection.</p>
+						<p><strong>ARP scan -</strong> (-PR) only carry out an ARP scan, this only works on the local network or subnet as yourself
+						<p><strong>ICMP echo request -</strong> (-PE) nmap will send an echo request and expects a ICMP echo reply if the machine is online. Many firewalls will block ICMP.</p> 
+						<p><strong>ICMP timestamp requests -</strong> (-PP) nmap will use a timestamp request in an attempt to bypass firewall blocking.</p>
+						<p><strong>ICMP address mask queries -</strong> (-PM) nmap will use this request to try and get a response.</p>
 						<p><strong>others -</strong> a range of other switches exist on top of the ones above.</p>
 					</section>
 				<!-- Three -->
@@ -54,17 +58,17 @@
 				<!-- Four -->
 					<section id="four">
 						<h2>Port Scanning Switches</h2>
-						<p><strong>TCP SYN scan -</strong> -sS never completing the handshake this is fast and stealthy.<target ip>.</p>
-					  	<p><strong>TCP Connect scan -</strong> -sT nmap will complete the connection to the open port but this takes longer and the traget system is likly to log the cannection.</p>
-            					<p><strong>UDP scan -</strong> -sU as open and filtred UDP ports rarely send any response this can be a very slow scan.</p>
-            					<p><strong>TCP NULL, Fin and Xmas scans -</strong> -sN -sF -sX nmap sets varrious flags to elicite some response fromt the target and can bypass some firewalls.</p>
+						<p><strong>TCP SYN scan -</strong> (-sS) never completing the handshake this is fast and stealthy.<target ip>.</p>
+					  	<p><strong>TCP Connect scan -</strong> (-sT) nmap will complete the connection to the open port but this takes longer and the traget system is likly to log the cannection.</p>
+            					<p><strong>UDP scan -</strong> (-sU) as open and filtred UDP ports rarely send any response this can be a very slow scan.</p>
+            					<p><strong>TCP NULL, Fin and Xmas scans -</strong> (-sN) (-sF) (-sX) nmap sets varrious flags to elicite some response fromt the target and can bypass some firewalls.</p>
             					<p><strong>TCP ACK scan -</strong> nmap uses this scan to map firewall rulesets.</p>
             					<p><strong>Others -</strong> nmap has a range of other specialized scans beyond the above list</p>
 					</section>
 				<!-- Five -->
 					<section id="five">
 						<h2>Service and OS detection switches</h2>
-						<p><strong>Version Detection -</strong> -sV nmap looks for the services that are running on a port.</p>
+						<p><strong>Version Detection -</strong> (-sV) nmap looks for the services that are running on a port.</p>
 					</section>
 		<!-- Footer -->
 			<footer id="footer">
