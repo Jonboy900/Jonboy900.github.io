@@ -76,8 +76,13 @@
 					</section>
 				<!-- Six -->
 					<section id="six">
-						<h2>Service and OS detection switches</h2>
-						<p><strong>Version Detection -</strong> (-sV) nmap looks for the services that are running on a port.</p>
+						<h2>Service and OS detection switches and more</h2>
+						<p><strong>Version Detection -</strong> (-sV) nmap looks for the services and version numbers that are running on a port. We can also add the intensity with (--version-intensity-level) level can be light intensity 2 or all intensity 9. Note this is a non stealthy as full handshake has to be established</p>
+						<p><strong>Operating System detection -</strong> (-O) nmap will attempt to detect the OS and will also guess the version number.</p>
+						<p><strong>Trace Route -</strong> (--traceroute) nmap will try to establish the route taken between you and the taraget IP.</p>
+						<p><strong>Scripts -</strong> (-sC) nmap will use a set of default scripts to establish more information.</p>
+						<p><strong>Setting Scripts -</strong> (--script "script-name") will allow you to set specific scripts to run. You can add to the library or choose from those installed in /usr/share/nmap/scripts.</p>
+						<p><strong>Saving Output -</strong> (-oN filename) will save a normal output. (-oG filename) will save the output in a grepable format. (-oX filename) will cave the output in and XML format.</p>
 					</section>
 		<!-- Footer -->
 			<footer id="footer">
