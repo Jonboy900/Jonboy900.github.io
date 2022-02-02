@@ -47,6 +47,22 @@
 						<p><strong>initialize the data base -</strong> use the msfdb init command.</p>
 						<p><strong>start Metasploit -</strong> use the msfconsole command.</p>
 					</section>
+				
+				<!-- Four -->
+					<section id="four">
+						<h2>Simple Example Bolt on THM</h2>
+						<p><strong>msfconsole -</strong> to start using metasploit.</p>
+						<p><strong>db_nmap -sV (target IP) -</strong> to get a map of the ports and services running. Port 8000 is open and looks like a web server.</p>
+						<p><strong>Browse the web site -</strong> navigate to (target IP):8000 and have a look around we can get the admin name and password in blogs here as well as seeing that the CMS is Bolt.</p>
+						<p><strong>Try and login -</strong> need to find the login page. Google bolt cms to find default login page Browse to (target IP):8000/bolt and login with admin name and password note can see version of Bolt running here.</p>
+						<p><strong>search bolt in metasploit -</strong> to look for any known exploits returns 2 know exploits including the path names and which versions of Bolt they work on.</p>
+						<p><strong>info (exploit/path) -</strong> will give us a lot of information on how to use this and provide the EDB-ID.</p>
+						<p><strong>use (exploit/path) -</strong> now we will need to set some variables LHOST (that is our attack box) RHOST (target machine) USERNAME and PASSWORD.</p>
+						<p><strong>set (VAR value) -</strong> to set up the variables.</p>
+						<p><strong>run -</strong> will star the exploit with the variables we have set and if successful will create a shell for us.</p>
+						<p><strong>Bash commands to look around -</strong> ls, pwd, help, cd/home, ls and cat (filename) will all be useful here to find the flag.</p>
+					</section>
+				
 			</div>
 
 		<!-- Footer -->
