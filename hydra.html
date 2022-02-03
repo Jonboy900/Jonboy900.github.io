@@ -32,8 +32,8 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Example - Hydra room of THM</h2>
-						<p><strong>For SSH -</strong> the command would be (hydra -l username -P path to list Target machine IP -t number of threads ssh).</p>
-						
+						<p><strong>For SSH -</strong> the command would be (hydra -l username -P path to list Target machine IP ssh). Stepping through that -l a single user name, -P the path to word list we want to use, target IP, ssh for the type of attack. a password found by this could then be used in an ssh username@IPaddress   </p>
+						<p><strong>For a Post Web Form -</stong> the command line (hydra -l username -P path to list Target Machine IP http-post-form "/:username=^PASS^:F=incorrect" -V). To break that down -l = a single user name that you might know, -P a path to a word list on your machine ie /usr/share/wordlists/rockyou.txt for the rockyou list. TargetIP. http-post-form = the type of attack we are doing. "/login (the web page):username=^USER^ the field from earlier &password=^PASS^ gives us the .txt file we are going to use, :"fail condition" if you failed at logging in what did the web site respond with.</p> 
 					</section>
 			</div>
 
