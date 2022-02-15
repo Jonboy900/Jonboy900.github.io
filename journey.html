@@ -39,6 +39,7 @@
 				<!-- Three -->
 					<section id="three">
 						<h2>Web Application Security</h2>
+						<p>This simulated penetration is against the Try Hack Me room - Basic Pentesting.</p>
 						<p>Starting with an IP adress we can establish that we have a basic machine responding with a Ping test.</p>
 						<p>Next a network mapper Nmap to see what ports are responding and what sort of services are running on the machine.</p>
 						<p>On seeing a http service running on a port we can try inspecting this simply by browsing to the IP address.</p>
@@ -47,8 +48,12 @@
 						<p>With this information we can browse to look at any hidden directories.</p>
 						<p>Enum4linux can be deployed to see what else can be discovered, in this case the user names were discovered.</p>
 						<p>Hydra can be used to break simple passwords with a brute force approach using a password list like rockyou.txt.</p>
-						<p>Once a user name and password have been discovered
-				</section>
+						<p>Once a user name and password have been discovered we can use SSH to login to that machine. More info on SSH can be found on the Linux page.</p>
+						<p>Once inside with an shell we can have a look around using linux Bash commands like; cd, ls and cat to see what can be found.</p>
+						<p>In this case we found a private key that had been encrypted for another user. To attempt breaking an Encryption john the ripper will attempt break the encryption for us.</p>
+						<p>With the encrpyted password now broken we can try gaining access as that user.</p>
+						<This covered a range of tools that are all part of the pentested toolbox that allowed access to the machine starting with just an IP address, more info on the tools I encountered will be found in the various links.</p> 
+					</section>
 				
 				<!-- Four -->
 					<section id="four">
