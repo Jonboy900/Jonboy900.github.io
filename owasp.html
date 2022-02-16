@@ -62,31 +62,31 @@
         			<!-- Seven -->
 					<section id="seven">
 						<h2>6 - Vulnerable and Outdated Components</h2>
-						<p>.</p>
+						<p>If you have used extrenal components or library moduals in the code how do you know that they were safe or if newer version will be safe. To solve this only obtain components from offical sources and monitor the libraries for Common Vulnerabity Exposures(CVE) if a library is found to have a weekness then the package that includes it will have a weekness.</p>
         				</section>
         
         			<!-- Eight -->
 					<section id="eight">
 						<h2>7 - Identifcation and Authentication Failures</h2>
-						<p>.</p>
+						<p>If a system allows brute force attacks or credential stuffing it will be week. If the system does not enforce a strong password system and uses plain text or weakly hashed passwords. Even if the system is shipped with default passords and changing passwords is not enforced it will be weak.</p>
         				</section>
         
         			<!-- Nine -->
 					<section id="nine">
 						<h2>8 - Software and Data Integrity Failures</h2>
-						<p>.</p>
+						<p>When an application relies upon plugins that might come from untrusted sources it allows for the possible introduction of malicious code. If this code is updated by an auto-update process without integrity verification the the system can be compromised. Digital signatures and dependency checkers can reduce the risk.</p>
         				</section>
         
         			<!-- Ten -->
 					<section id="ten">
 						<h2>9 - Security Loggins and Monitoring Failures</h2>
-						<p>.</p>
+						<p>Without logging and monitoring breaches cannot be detected. When alerting thresholds and response escalation is not effective the system is vulnerable. SIEM tools and a SecOps team capable of dealing with this may be required.</p>
         				</section>
         
         			<!-- Eleven -->
 					<section id="eleven">
 						<h2>10 - Server Side Request Forgery (SSRF)</h2>
-						<p>.</p>
+						<p>By getting the Server Side to make requests some layers of the security system is avoided, the firewall might ignore a GET request coming from inside the system while it would have stopped the PUSH from outside the system. Sanitizing client input data.</p>
         				</section>
         
 			</div>
