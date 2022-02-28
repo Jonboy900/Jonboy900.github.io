@@ -34,11 +34,11 @@
 					<section id="two">
 						<h2>Pen Testing</h2>
 						<p><strong>Methodology for Pen Testing</strong> this can be broken down into a five step plan.</p>
-						<p><strong>1 - Information Gathering</strong> this coveres a range of open source research that might include examining web sites, social media or public records. None of this stage involves any hacking.</p>
-						<p><strong>2 - Enumeration/Scanning</strong> an invistigation of applications and services that are running on the target system.</p>
-						<p><strong>3 - Exploitation</strong> finding and using vulerabilities that exist on the on system its applications and services.</p>
-						<p><strong>4 - Privilage Escalation</strong> with a foothold established then try to escalate the access via moving horizontaly into use acounts of the same access level or vertically into another permisions group.</p>
-						<p><strong>5 - Post Exploitation</strong> what else can achieved, additonal information, further host explotation or access to wider systems. Then the tester may wish to cover the tracks of the penetration removing files and even altering logs. The final stage is the reporting of the steps taken to gain access to a system so that the system owners can improve the security.</p>
+						<p><strong>1 - Information Gathering</strong> this covers a range of open source research that might include examining web sites, social media or public records. None of this stage involves any hacking.</p>
+						<p><strong>2 - Enumeration/Scanning</strong> an investigation of applications and services that are running on the target system.</p>
+						<p><strong>3 - Exploitation</strong> finding and using vulnerabilities that exist on the on system its applications and services.</p>
+						<p><strong>4 - Privilege Escalation</strong> with a foothold established then try to escalate the access via moving horizontally into use accounts of the same access level or vertically into another level of permisions  group.</p>
+						<p><strong>5 - Post Exploitation</strong> what else can achieved, additional information, further host exploitation or access to wider systems. Then the tester may wish to cover the tracks of the penetration removing files and even altering logs. The final stage is the reporting of the steps taken to gain access to a system so that the system owners can improve the security.</p>
 						<p>The following simulated penetration is against the Try Hack Me room - Basic Pen testing.</p>
 						<p>Starting with an <a href="ip.html">IP address</a> we can establish that we have a basic machine responding with a Ping test.</p>
 						<p>Next a network mapper <a href="nmap.html">Nmap</a> can be deployed to see what ports are responding and what sort of services are running on the machine.</p>
@@ -49,7 +49,7 @@
 						<p><a href="enum.html">Enum4linux</a> can be deployed to see what else can be discovered, in this case the user names were discovered.</p>
 						<p><a href="hydra.html">Hydra</a> can be used to break simple passwords with a brute force approach using a password list like rockyou.txt.</p>
 						<p>Once a user name and password have been discovered we can use SSH to login to that machine. More info on SSH can be found on the  <a href="linux.html">Linux page</a>.</p>
-						<p>Once inside with an shell we can have a look around using <a href="linux.html">Linux Bash</a> commands like; cd, ls and cat to see what can be found.</p>
+						<p>Once inside with a shell we can have a look around using <a href="linux.html">Linux Bash</a> commands like; cd, ls and cat to see what can be found.</p>
 						<p>In this case we found a private key that had been encrypted for another user. To attempt breaking an Encryption john the ripper will attempt break the encryption for us.</p>
 						<p>With the encrypted password now broken we can try gaining access as that user.</p>
 						<p>This covered a range of tools that are all part of the pen tested toolbox that helped provide access to the machine starting with just an IP address, more info on the tools I encountered will be found in the various links.</p>
