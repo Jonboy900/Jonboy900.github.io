@@ -26,19 +26,19 @@
 						<header class="major">
 							<h2>OWASP Top Ten.</h2>
 						</header>
-						<p>This identifies and ranks the most critical security risks to web application. At time of writing this refenences the 2021 tables.</p>
+						<p>This identifies and ranks the most critical security risks to web application. At time of writing this references the 2021 tables.</p>
 					</section>
         
         			<!-- Two -->
 					<section id="two">
 						<h2>1 - Broken Access Control</h2>
-						<p>This covers the password login authenticication system. Brute force attacks with mulipule attempts can be stopped with auto lockouts after a certain number of attempts. Weak credentials and common passwords can be improved by enforcing a strong password policy. Weak session cookies can be mitigated with multi factor authenticication.</p>
+						<p>This covers the password login authentication system. Brute force attacks with muliple attempts can be stopped with auto lockouts after a certain number of attempts. Weak credentials and common passwords can be improved by enforcing a strong password policy. Weak session cookies can be mitigated with multi factor authentication.</p>
         				</section>
         
         			<!-- Three -->
 					<section id="three">
 						<h2>2 - Crytographic Failures</h2>
-						<p>Previously known as Sensitive Data Exposure, this covers a range of data that is exposed when a webapp ends up giving it away possibly make the database available or by failing to encrypt or weakly encrypting the data when transmiting it.</p>
+						<p>Previously known as Sensitive Data Exposure, this covers a range of data that is exposed when a webapp ends up giving it away possibly make the database available or by failing to encrypt or weakly encrypting the data when transmitting it.</p>
         				</section>
         
         			<!-- Four -->
@@ -56,30 +56,30 @@
         			<!-- Six -->
 					<section id="six">
 						<h2>5 - Security Misconfiguation</h2>
-						<p>This now includes XML External Entity attack (XXE). XML is the markup for cross platform delivery, used for storing and transporting data. It is possible to get xml to perform a read opperation when it is read on the target machine, this provides an opportunity for the target machine to display data that it was not meant to have displayed </p>
+						<p>This now includes XML External Entity attack (XXE). XML is the mark-up for cross platform delivery, used for storing and transporting data. It is possible to get xml to perform a read operation when it is read on the target machine, this provides an opportunity for the target machine to display data that it was not meant to have displayed </p>
         				</section>
         
         			<!-- Seven -->
 					<section id="seven">
 						<h2>6 - Vulnerable and Outdated Components</h2>
-						<p>If you have used extrenal components or library moduals in the code how do you know that they were safe or if newer version will be safe. To solve this only obtain components from offical sources and monitor the libraries for Common Vulnerabity Exposures(CVE) if a library is found to have a weekness then the package that includes it will have a weekness.</p>
+						<p>If you have used external components or library modules in the code how do you know that they were safe or if newer version will be safe. To solve this only obtain components from official sources and monitor the libraries for Common Vulnerability Exposures(CVE) if a library is found to have a weakness then the package that includes it will have a weekness.</p>
         				</section>
         
         			<!-- Eight -->
 					<section id="eight">
 						<h2>7 - Identifcation and Authentication Failures</h2>
-						<p>If a system allows brute force attacks or credential stuffing it will be week. If the system does not enforce a strong password system and uses plain text or weakly hashed passwords. Even if the system is shipped with default passords and changing passwords is not enforced it will be weak.</p>
+						<p>If a system allows brute force attacks or credential stuffing it will be week. If the system does not enforce a strong password system and uses plain text or weakly hashed passwords. Even if the system is shipped with default passwords and changing passwords is not enforced it will be weak.</p>
         				</section>
         
         			<!-- Nine -->
 					<section id="nine">
 						<h2>8 - Software and Data Integrity Failures</h2>
-						<p>When an application relies upon plugins that might come from untrusted sources it allows for the possible introduction of malicious code. If this code is updated by an auto-update process without integrity verification the the system can be compromised. Digital signatures and dependency checkers can reduce the risk.</p>
+						<p>When an application relies upon plugins that might come from untrusted sources it allows for the possible introduction of malicious code. If this code is updated by an auto-update process without integrity verification the system can be compromised. Digital signatures and dependency checkers can reduce the risk.</p>
         				</section>
         
         			<!-- Ten -->
 					<section id="ten">
-						<h2>9 - Security Loggins and Monitoring Failures</h2>
+						<h2>9 - Security Logins and Monitoring Failures</h2>
 						<p>Without logging and monitoring breaches cannot be detected. When alerting thresholds and response escalation is not effective the system is vulnerable. SIEM tools and a SecOps team capable of dealing with this may be required.</p>
         				</section>
         
