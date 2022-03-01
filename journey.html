@@ -37,7 +37,7 @@
 						<p><strong>1 - Information Gathering</strong> this covers a range of open source research that might include examining web sites, social media or public records. None of this stage involves any hacking.</p>
 						<p><strong>2 - Enumeration/Scanning</strong> an investigation of applications and services that are running on the target system.</p>
 						<p><strong>3 - Exploitation</strong> finding and using vulnerabilities that exist on the on system its applications and services.</p>
-						<p><strong>4 - Privilege Escalation</strong> with a foothold established then try to escalate the access via moving horizontally into use accounts of the same access level or vertically into another level of permisions  group.</p>
+						<p><strong>4 - Privilege Escalation</strong> with a foothold established then try to escalate the access via moving horizontally into use accounts of the same access level or vertically into another level of permissions group.</p>
 						<p><strong>5 - Post Exploitation</strong> what else can achieved, additional information, further host exploitation or access to wider systems. Then the tester may wish to cover the tracks of the penetration removing files and even altering logs. The final stage is the reporting of the steps taken to gain access to a system so that the system owners can improve the security.</p>
 						<p>The following simulated penetration is against the Try Hack Me room - Basic Pen testing.</p>
 						<p>Starting with an <a href="ip.html">IP address</a> we can establish that we have a basic machine responding with a Ping test.</p>
@@ -70,14 +70,14 @@
 				<!-- Five -->
 					<section id="five">
 						<h2>Common Vulnerabilities</h2>
-						<p><strong>CVE's -</strong> Common Vulnerabilities and Exposures. A single unique identifier for a vulnarability these are used by a number of organisation and details the common knowledge about a vurnerability. <a href="metasploit.html">Metasploit</a> the framework for searching and using CVE's. Metasploit is split in to several moduals: to look at a system for a weakness, exploit that weakness, modify an attack to hide it. Given a CVE number you can search Metasploit to look at the vurnerability and gain information on the exploit and even how sucessful the exploit has been. The strength of Metasploit is to link all the elements together so while running a system scam using Nmap wih in Metasploit the data will populate the Metasploit database looking up exploits as we see system data.</p>
+						<p><strong>CVE's -</strong> Common Vulnerabilities and Exposures. A single unique identifier for a vulnerability these are used by a number of organisation and details the common knowledge about a vulnerability. <a href="metasploit.html">Metasploit</a> the framework for searching and using CVE's. Metasploit is split in to several modules: to look at a system for a weakness, exploit that weakness, modify an attack to hide it. Given a CVE number you can search Metasploit to look at the vulnerability and gain information on the exploit and even how successful the exploit has been. The strength of Metasploit is to link all the elements together so while running a system scam using Nmap within Metasploit the data will populate the Metasploit database looking up exploits as we see the system data.</p>
 						<p>The following simulated penetration is against the Try Hack Me room - Bolt.</p>
 						<p>A good habit is recording the steps taken in a file.</p>
-						<p>With Metasploit running "msfconsole" to start, we ran a Nmap of the system with "db nmap (target ip)" to get a view of what running on the traget system and we can see a bolt server running on port 8000.</p>
+						<p>With Metasploit running "msfconsole" to start, we ran a Nmap of the system with "db nmap (target ip)" to get a view of what running on the target system and we can see a bolt server running on port 8000.</p>
 						<p>Taking a look around at the web page with "target_ip:8000" we can see that they have left a password and a user name on the blog pages.<
 						<p>By logging in with the above details we can find the version number of the Bolt server. We can now search the Metaspoilt for the exploits available for Bolt "search bolt" will show us 2 CVE's and looking at these we can get some more info with "info exploit name".</p>
 						<p>From the above information we can see what the variables are we will need to set to use this exploit, set LHOST, set RHOST ectra. Note you will need to be in the exploit module of msfconsole.</p>
-						<p>With in metasploit exploit and having chosen our exploit and set the variables we can now "run" the exploit to gain a reverse shell.</p>
+						<p>Within metasploit exploit and having chosen our exploit and set the variables we can now "run" the exploit to gain a reverse shell.</p>
 					</section>
 				
 				<!-- Six -->
@@ -86,7 +86,7 @@
 						<p><strong>File analysis -</strong> Examining malware to see what it is doing. We might have identified a file that is suspicious and without running it what can we find out.</p>
 						<p>Understanding malware this can be broken down into two main categories targeted and mass campaigns. Stuxnet was spread far and wide looking like a mass campaigns however it was looking for a particular device in Iran only fired its payload when it found that system. Wannacry was an example of a wide spread attack using the eternal blue exploit.</p>
 						<p>While examining malware we can consider the delivery method, the execution, how it maintains persistence and how it propagates across systems.</p>
-						<p>Delivery was it on a compromised USB stick or as an attachment in a phising attack.</p>
+						<p>Delivery was it on a compromised USB stick or as an attachment in a phishing attack.</p>
 						<p>Execution is it encrypting files, is it recording information like keystrokes it is Spyware.</p>
 						<p>Maintaining Persistence if it killed by just restarting your machine then its not much of a malware but what is it doing to maintain its presence.</p>
 						<p>Propagation if you can infect one machine what can the malware do to infect further devices.</p>
