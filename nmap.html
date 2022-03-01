@@ -27,8 +27,8 @@
 						<header class="major">
 							<h2>Nmap.</h2>
 						</header>
-						<p>By using IP packets it trys ways of determing what hosts are available on a network. It can futher discover what opperating systems are in use and what services might be available. Available as a command line tool or with an interface (Zenmap). Ncat is a flexible data transfer tool. Ndiff a utility for comparing results. Nping is a packet generation and response analysis tool.</p>
-						<p>The sections below cover just some of the switches that can be deloped by Nmap.</p>	
+						<p>By using IP packets it try's to determine what hosts are available on a network. It can further discover what operating systems are in use and what services might be available. Available as a command line tool or with an interface (Zenmap). Ncat is a flexible data transfer tool. Ndiff a utility for comparing results. Nping is a packet generation and response analysis tool.</p>
+						<p>The sections below cover just some of the switches that can be deployed by Nmap.</p>	
 					</section>
 
 				<!-- Two -->
@@ -37,23 +37,23 @@
 						<p><strong>Syntax -</strong> nmap [options] target ip.</p>
 					  	<p><strong>List Scan -<strong> (-sL) list each host of the specified network and a reverse DNS lookup to learn the hosts names -n will supress the DNS lookup. Nmap will not actually scan the port</p>
             					<p><strong>Ping Scan or Ping Sweep -</strong> (-sn) turns off the port scanning and list those hosts that responded to the host discovery probes.</p>
-            					<p><strong>TCP SYN Ping -</strong> (-PS) sends empty TCP packets witht the SYN flag set to test for a three way handshake expecting a SYN/ACK from a live port but even an RST response tells us the port is active.</p>
+            					<p><strong>TCP SYN Ping -</strong> (-PS) sends empty TCP packets with the SYN flag set to test for a three way handshake expecting a SYN/ACK from a live port but even an RST response tells us the port is active.</p>
             					<p><strong>TCP ACK Ping -</strong> (-PA) by sending an ACK most hosts will respond with a RST as no connection is established. This proves that the port is active and listening.</p>
             					<p><strong>UDP Ping -</strong> (-PU) a normally empty packet is sent to test for a response, we would not normally expect an active port to respond but if the port is closed we will get an ICMP unreachable packet. Note firewalls often ignore UDP and allow port detection.</p>
 						<p><strong>ARP scan -</strong> (-PR) only carry out an ARP scan, this only works on the local network or subnet as yourself
 						<p><strong>ICMP echo request -</strong> (-PE) nmap will send an echo request and expects a ICMP echo reply if the machine is online. Many firewalls will block ICMP.</p> 
 						<p><strong>ICMP timestamp requests -</strong> (-PP) nmap will use a timestamp request in an attempt to bypass firewall blocking.</p>
 						<p><strong>ICMP address mask queries -</strong> (-PM) nmap will use this request to try and get a response.</p>
-						<p><strong>others -</strong> a range of other switches exist on top of the ones above.</p>
+						<p><strong>Others -</strong> a range of other switches exist on top of the ones above.</p>
 					</section>
 				<!-- Three -->
 					<section id="three">
 						<h2>Port States</h2>
-						<p><strong>Open -</strong> the port is activly receiving (TCP/UDP/SCTP) <target ip>.</p>
-					  	<p><strong>Closed -</strong> the port is accessable but no application is listening.<target ip>.</p>
-            					<p><strong>Filtered -</strong> nmap can not determine if the port is open or closed.<target ip>.</p>
-            					<p><strong>Unfiltered -</strong> the port is accesible but Nmap is unable to detect if the port is open or closed.<target ip>.</p>
-						<p><strong>Open/filtered -</strong> nmap can not determine if the port is open or filtered.</p>
+						<p><strong>Open -</strong> the port is actively receiving (TCP/UDP/SCTP) <target ip>.</p>
+					  	<p><strong>Closed -</strong> the port is accessible but no application is listening.<target ip>.</p>
+            					<p><strong>Filtered -</strong> nmap cannot determine if the port is open or closed.<target ip>.</p>
+            					<p><strong>Unfiltered -</strong> the port is accessible but Nmap is unable to detect if the port is open or closed.<target ip>.</p>
+						<p><strong>Open/filtered -</strong> nmap cannot determine if the port is open or filtered.</p>
             					<p><strong>Closed/filtered -</strong> nmap is unsure if the port is closed or filtered.</p>
 					</section>
 				<!-- Four -->
@@ -61,17 +61,17 @@
 						<h2>Port Scanning Switches</h2>
 						<p><strong>all ports -</strong> (-p-) scan all ports.</p>
 						<p><strong>port range -</strong> (-p1-1023) scan all ports from 1 to 1023.</p>
-						<p><strong>100 common ports -</strong> (-F) nmap wil scan the 100 most common ports.</p>
+						<p><strong>100 common ports -</strong> (-F) nmap will scan the 100 most common ports.</p>
 						<p><strong>scan ports in order -</strong> (-r) nmap will scan the ports in consecutive order.</p>
-						<p><strong>scan speed -</strong> (-T0-5) -T0 is the slowest and least likly to be detected while -T5 is very fast but might be unreliable.</p>
+						<p><strong>scan speed -</strong> (-T0-5) -T0 is the slowest and least likely to be detected while -T5 is very fast but might be unreliable.</p>
 					</section>
 				<!-- Five -->
 					<section id="five">
 						<h2>Port Scanning Types</h2>
 						<p><strong>TCP SYN scan -</strong> (-sS) never completing the handshake this is fast and stealthy.<target ip>.</p>
-					  	<p><strong>TCP Connect scan -</strong> (-sT) nmap will complete the connection to the open port but this takes longer and the traget system is likely to log the connection.</p>
-            					<p><strong>UDP scan -</strong> (-sU) as open and filtred UDP ports rarely send any response this can be a very slow scan.</p>
-            					<p><strong>TCP NULL, Fin and Xmas scans -</strong> (-sN) (-sF) (-sX) nmap sets varrious flags to elicite some response from the target and can bypass some firewalls.</p>
+					  	<p><strong>TCP Connect scan -</strong> (-sT) nmap will complete the connection to the open port but this takes longer and the target system is likely to log the connection.</p>
+            					<p><strong>UDP scan -</strong> (-sU) as open and filtered UDP ports rarely send any response this can be a very slow scan.</p>
+            					<p><strong>TCP NULL, Fin and Xmas scans -</strong> (-sN) (-sF) (-sX) nmap sets various flags to elicit some response from the target and can bypass some firewalls.</p>
             					<p><strong>TCP ACK scan -</strong> (-sA) nmap uses this scan to map firewall rulesets.</p>
             					<p><strong>Others -</strong> nmap has a range of other specialized scans beyond the above list</p>
 					</section>
@@ -80,7 +80,7 @@
 						<h2>Service and OS detection switches and more</h2>
 						<p><strong>Version Detection -</strong> (-sV) nmap looks for the services and version numbers that are running on a port. We can also add the intensity with (--version-intensity-level) level can be light intensity 2 or all intensity 9. Note this is non-stealthy as full handshake has to be established</p>
 						<p><strong>Operating System detection -</strong> (-O) nmap will attempt to detect the OS and will also guess the version number.</p>
-						<p><strong>Trace Route -</strong> (--traceroute) nmap will try to establish the route taken between you and the taraget IP.</p>
+						<p><strong>Trace Route -</strong> (--traceroute) nmap will try to establish the route taken between you and the target IP.</p>
 						<p><strong>Scripts -</strong> (-sC) nmap will use a set of default scripts to establish more information.</p>
 						<p><strong>Setting Scripts -</strong> (--script "script-name") will allow you to set specific scripts to run. You can add to the library or choose from those installed in /usr/share/nmap/scripts.</p>
 						<p><strong>Saving Output -</strong> (-oN filename) will save a normal output. (-oG filename) will save the output in a grepable format. (-oX filename) will save the output in and XML format.</p>
