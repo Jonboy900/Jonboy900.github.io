@@ -26,17 +26,17 @@
 						<header class="major">
 							<h2>Burp Suite.</h2>
 						</header>
-						<p>Burp can capture and manipulate the traffic between you and the web server you are looking at. Once captured this traffic can be examined and altered or passed to one of the other tools inside the Brup Suite. Burp is available at diffent levels, this considers the free or community version which comes with some limitations.</p>
+						<p>Burp can capture and manipulate the traffic between you and the web server you are looking at. Once captured this traffic can be examined and altered or passed to one of the other tools inside the Brup Suite. Burp is available at different levels, this considers the free or community version which comes with some limitations.</p>
 					</section>
 
 				<!-- Two -->
 					<section id="two">
 						<h2>Elements</h2>
-						<p><strong>Proxy -</strong> the intercept tool. Capturing and holding requests or responces with a web server. While this is active all requests will be captured and held until you choose to forward them. Note while intercept is on this stops a web site interacting until you forward the request you want it to process. While you are looking at a web site proxy will be building a map of all the elements of the web site that it can see.</p>
-						<p><strong>Repeater -</strong> from a capture in the proxy mode we can forward a request to the repeater, here we can edit the request, this can allow us to bypass frontend web site cleaning of fields. We can then resend that request multipul times exploring weaknesses.</p>
-						<p><strong>Intruder -</strong> this tool will allow multipul requests to be issued whith changed parameters allowing Brute Force attacks. Four main modes: Sniper allows a wordlist to replace a single variable and try with each entry. Battering Ram will try the payload in each available location. Pitchfork allows us to use multipul payloads in different positions while Cluster Bomb will try out multipul payloads and combinations that that creates.</p>
+						<p><strong>Proxy -</strong> the intercept tool. Capturing and holding requests or responses with a web server. While this is active all requests will be captured and held until you choose to forward them. Note while intercept is on this stops a web site interacting until you forward the request you want it to process. While you are looking at a web site proxy will be building a map of all the elements of the web site that it can see.</p>
+						<p><strong>Repeater -</strong> from a capture in the proxy mode we can forward a request to the repeater, here we can edit the request, this can allow us to bypass frontend web site cleaning of fields. We can then resend that request multiple times exploring weaknesses.</p>
+						<p><strong>Intruder -</strong> this tool will allow multiple requests to be issued whith changed parameters allowing Brute Force attacks. Four main modes: Sniper allows a wordlist to replace a single variable and try with each entry. Battering Ram will try the payload in each available location. Pitchfork allows us to use multiple payloads in different positions while Cluster Bomb will try out multipul payloads and combinations that that creates.</p>
 						<p><strong>Decoder -</strong> allows encoding or decoding.</p>
-						<p><strong>Compare -</strong> provides comparrison of data at different levels.</p>
+						<p><strong>Compare -</strong> provides comparison of data at different levels.</p>
 						<p><strong>Sequencer -</strong> evaluates randomness in things like cookie values.</p>
 						<p><strong>Extender -</strong> for loading external extensions or the inclusion of internal code segments.</p>
 					</section>
@@ -45,8 +45,8 @@
 					<section id="three">
 						<h2>Set up required</h2>
 						<p><strong>Redirecting browser traffic -</strong> In Firefox FoxyProxy should be deployed for Burp and the traffic must pass through the port established by IP 127.0.0.1:8080</p>
-						<p><strong>Cerification -</strong> When Proxy is active go to HTTP://burp/cert and download cacert.der. Then in firefox search type about preferences search for certificates, find View Certificates and Import, find the downloded file then tick trust this CA to identify websites.</p>
-						<p><strong>Proxy scoping -</strong> to stop all traffic being recorded by the intercept set the scope for the project. Target>scope set the traget IP, then in Proxy options>intercept client request check 'And URL is in target scope.</p>
+						<p><strong>Certification -</strong> When Proxy is active go to HTTP://burp/cert and download "cacert.der". Then in Firefox search type about preferences search for certificates, find View Certificates and Import, find the downloaded file then tick trust this CA to identify websites.</p>
+						<p><strong>Proxy scoping -</strong> to stop all traffic being recorded by the intercept set the scope for the project. Target>scope set the target IP, then in Proxy options>intercept client request check 'And URL is in target scope.</p>
 					</section>
 			</div>
 
