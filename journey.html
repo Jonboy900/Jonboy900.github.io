@@ -44,6 +44,19 @@
 						<p><strong>ISO 2700 -</strong> the International Organization for Standardization provides a range of accreditation for cyber security we are most interested in is the 27000 family. The family contains 27001 which is an auditable section.</p>
 					</section>
 
+				<!-- Five -->
+					<section id="five">
+						<h2>Common Vulnerabilities</h2>
+						<p><strong>Identifiyed and defined - </strong> this covers the need to record and identify existing existing vulnerabilities. It does not cover 'zero day' threats but provides a framework for analysising a system exposure to existing threats.</p> 
+						<p><strong>CVE's -</strong> Common Vulnerabilities and Exposures. A single unique identifier for a vulnerability these are used by a number of organisation and details the common knowledge about a vulnerability. <a href="metasploit.html">Metasploit</a> the framework for searching and using CVE's. Metasploit is split in to several modules: to look at a system for a weakness, exploit that weakness, modify an attack to hide it. Given a CVE number you can search Metasploit to look at the vulnerability and gain information on the exploit and even how successful the exploit has been. The strength of Metasploit is to link all the elements together so while running a system scam using Nmap within Metasploit the data will populate the Metasploit database looking up exploits as we see the system data.</p>
+						<p>The following simulated penetration is against the Try Hack Me room - Bolt.</p>
+						<p>A good habit is recording the steps taken in a file.</p>
+						<p>With Metasploit running "msfconsole" to start, we ran a Nmap of the system with "db nmap (target ip)" to get a view of what running on the target system and we can see a bolt server running on port 8000.</p>
+						<p>Taking a look around at the web page with "target_ip:8000" we can see that they have left a password and a user name on the blog pages.<
+						<p>By logging in with the above details we can find the version number of the Bolt server. We can now search the Metaspoilt for the exploits available for Bolt "search bolt" will show us 2 CVE's and looking at these we can get some more info with "info exploit name".</p>
+						<p>From the above information we can see what the variables are we will need to set to use this exploit, set LHOST, set RHOST ectra. Note you will need to be in the exploit module of msfconsole.</p>
+						<p>Within metasploit exploit and having chosen our exploit and set the variables we can now "run" the exploit to gain a reverse shell.</p>
+					</section>
 				<!-- Two -->
 					<section id="two">
 						<h2>Penetration Testing</h2>
@@ -81,18 +94,7 @@
 						<p><strong>-</strong> </p>
 					</section>
 				
-				<!-- Five -->
-					<section id="five">
-						<h2>Common Vulnerabilities</h2>
-						<p><strong>CVE's -</strong> Common Vulnerabilities and Exposures. A single unique identifier for a vulnerability these are used by a number of organisation and details the common knowledge about a vulnerability. <a href="metasploit.html">Metasploit</a> the framework for searching and using CVE's. Metasploit is split in to several modules: to look at a system for a weakness, exploit that weakness, modify an attack to hide it. Given a CVE number you can search Metasploit to look at the vulnerability and gain information on the exploit and even how successful the exploit has been. The strength of Metasploit is to link all the elements together so while running a system scam using Nmap within Metasploit the data will populate the Metasploit database looking up exploits as we see the system data.</p>
-						<p>The following simulated penetration is against the Try Hack Me room - Bolt.</p>
-						<p>A good habit is recording the steps taken in a file.</p>
-						<p>With Metasploit running "msfconsole" to start, we ran a Nmap of the system with "db nmap (target ip)" to get a view of what running on the target system and we can see a bolt server running on port 8000.</p>
-						<p>Taking a look around at the web page with "target_ip:8000" we can see that they have left a password and a user name on the blog pages.<
-						<p>By logging in with the above details we can find the version number of the Bolt server. We can now search the Metaspoilt for the exploits available for Bolt "search bolt" will show us 2 CVE's and looking at these we can get some more info with "info exploit name".</p>
-						<p>From the above information we can see what the variables are we will need to set to use this exploit, set LHOST, set RHOST ectra. Note you will need to be in the exploit module of msfconsole.</p>
-						<p>Within metasploit exploit and having chosen our exploit and set the variables we can now "run" the exploit to gain a reverse shell.</p>
-					</section>
+
 				
 				<!-- Six -->
 					<section id="six">
