@@ -60,10 +60,11 @@
 				<!-- Three -->
 					<section id="three">
 						<h2>Web Application Security (session 2?)</h2>
-						<p><strong>OWASP -</strong> The top 10 Web Application Security Risks. This covers the most common security risks and the steps to improve software development to produce more secure code. It is also interesting that overtime these rankings change. For a full explanations of each of these top ten Risks see the <a href="owasp.html">OWASP page</a></p>
 						<p><strong>Networking -</strong> To explore some of these Security Risks it is worth recapping the some network principles the Open System Interconnection Model see the <a href="osi.html">OSI page.</a> 	
 						<p><strong>IP Addressing -</strong> For the internet addressing it is also worth covering some of the <a href="ip.html">Internet Protocols.</a></p> 
-						<p><stong> -</stong> .</p>
+						<p><strong>OWASP -</strong> The top 10 Web Application Security Risks. This covers the most common security risks and the steps to improve software development to produce more secure code. It is also interesting that overtime these rankings change. For a full explanations of each of these top ten Risks see the <a href="owasp.html">OWASP page</a></p>
+						<p><stong>Burpsuite -</stong> Using the <a href="burp.html"Burpsuite tool</a> I will look at a few of the OWASP risks specifically Injection, Broken Authentication, Sensitive Data Exposure, Broken Access Control and Cross-Site Scripting. Burp can capture and manipulate the traffic between you and the web server you are looking at. Once captured this traffic can be examined and altered or passed to one of the other tools inside the Brup Suite.</p>
+						<p><stong>Intercepting web traffic -</strong> Intercepting each and every message between a browser and the internet can be something of an over kill so we will choose when when want Burp to intercept these by symply turning the Intercepter on and off. One of the strength of intercepting these messages is the ability to alter them, for example the frontend of the website might disallow some entries into say a search field stopping them being passed to the backend but by intercepting and altering these messages we can bypass that cleansing that the web front end has provided and start passing things to the backend that the site developers had not forseen.</p>
 					</section>
 				
 				<!-- Two -->
