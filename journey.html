@@ -33,10 +33,10 @@
 				<!-- Seven -->
 					<section id="seven">
 						<h2>Information Risk Management</h2>
-						<p><strong>Cyber Security -</strong> is about protecting ourselves against potential threats and examining what it is we are trying to defend. We will need to understand the rules and regulations that we need to abide by to ensure that we are carrying out our obligations to protect the data we hold </p>
+						<p><strong>Cyber Security -</strong> To start with I want to try and define what Cyber Security means. Protecting ourselves against potential threats and examining what it is we are trying to defend. We will need to understand the rules and regulations that we need to abide by to ensure that we are carrying out our obligations to protect the data we hold.</p>
 						<p><strong>CIA -</strong> the principles of - Confidentiality - data should be protected from unauthorized access or misuse. Integrity - data must not be altered by unauthorized people. Availability - the data should be available when authorized users want to use it.
-						<p><strong>Risk -</strong> as risk is a relatively loose concept we will need to define what risk means to the organization we are trying to protect. We can view Risk being made up of three elements a threat, a vulnerability and an asset. Threats could be an external actor, insider staff or even environmental event like fire or an earthquake. A vulnerability is a way those things can affect our system. Lastly the assets we are trying to protect, a database of customers, control of power distribution and so on. To have a risk we must have all three of these if anyone is missing or zero then we don't have a risk.</p> 
-						<p><strong>Evaluation -</strong> of the risk we can evaluate the Likelihood of the risk occurring and the Severity of that risk should it happen.</p>
+						<p><strong>Risk -</strong> as risk is a relatively loose concept we will need to define what risk means to the organization we are trying to protect. We can view risk being made up of three elements a threat, a vulnerability and an asset. Threats could be an external actor, insider staff or even environmental event like fire or an earthquake. A vulnerability is a way those things can affect our system. Lastly the assets we are trying to protect, a database of customers, control of power distribution and so on. To have a risk we must have all three of these if anyone is missing or zero then we don't have a risk.</p> 
+						<p><strong>Evaluation -</strong> of the risk we can evaluate the Likelihood of the risk occurring and the Severity of that risk should it happen. When can try to put a value to these so that we can judge what to do about them.</p>
 						<p><strong>Acceptance -</strong> when we have identified a risk we can then choose how to deal with risk if the costs of closing the vulnerability are vast and the assets exposed are minor an operation may choose to accept that risk.</p>
 						<p><strong>Mitigation -</strong> what can we do to reduce or remove a risk? This offers many possible actions depending on the risk identified. Another way of dealing with mitigation is the ability to transfer the risk to another party.</p> 
 						<p><strong>Review -</strong> this entire process needs to be reviewed and repeated as the world is constantly changing.</p>
@@ -47,14 +47,15 @@
 				<!-- Five -->
 					<section id="five">
 						<h2>Common Vulnerabilities</h2>
-						<p><strong>Identifiyed and defined - </strong> this covers the need to record and identify existing existing vulnerabilities. It does not cover 'zero day' threats but provides a framework for analysising a system exposure to existing threats.</p> 
+						<p><strong>Identifiyed and defined - </strong> now that we have some idea of what we are trying to defend we can examine some of the threats in this case we will look specifically at some of the vulnerabilities that have been exploited in the past. Previous vulnerabilities have been recorded and identified note this approach does not cover 'zero day' threats but provides a framework for analysising a system exposure to existing threats.</p> 
 						<p><strong>CVE's -</strong> Common Vulnerabilities and Exposures. A single unique identifier for a vulnerability these are used by a number of organisation and details the common knowledge about a vulnerability. <a href="metasploit.html">Metasploit</a> the framework for searching and using CVE's. Metasploit is split in to several modules: to look at a system for a weakness, exploit that weakness, modify an attack to hide it. Given a CVE number you can search Metasploit to look at the vulnerability and gain information on the exploit and even how successful the exploit has been. The strength of Metasploit is to link all the elements together so while running a system scam using Nmap within Metasploit the data will populate the Metasploit database looking up exploits as we see the system data.</p>
 						<p>The following simulated penetration is against the Try Hack Me room - Bolt. A good habit is recording the steps taken in a file.</p>
-						<p>With Metasploit running "msfconsole" to start, we ran a Nmap of the system with "db nmap (target ip)" to get a view of what running on the target system and we can see a bolt server running on port 8000.</p>
+						<p>With Metasploit running "msfconsole" to start, we ran a Nmap of the system with "db nmap (target_ip)" to get a view of what running on the target system and we can see a bolt server running on port 8000.</p>
 						<p>Taking a look around at the web page with "target_ip:8000" we can see that they have left a password and a user name on the blog pages.<
-						<p>By logging in with the above details we can find the version number of the Bolt server. We can now search the Metaspoilt for the exploits available for Bolt "search bolt" will show us 2 CVE's and looking at these we can get some more info with "info exploit name".</p>
+						<p>By logging in with the above details we can find the version number of the Bolt server. We can now search the Metaspoilt database for the exploits that exist for Bolt "search bolt" will show us 2 CVE's and looking at these we can get some more info with "info exploit name".</p>
 						<p>From the above information we can see what the variables are we will need to set to use this exploit, set LHOST, set RHOST ectra. Note you will need to be in the exploit module of msfconsole.</p>
 						<p>Within metasploit exploit and having chosen our exploit and set the variables we can now "run" the exploit to gain a reverse shell.</p>
+						<p>So to defend this system we would need to look at all the existing exploits that already exist.</p>
 					</section>
 				
 				<!-- Three -->
@@ -75,6 +76,7 @@
 				<!-- Two -->
 					<section id="two">
 						<h2>Penetration Testing</h2>
+						<p>A dedicated tester(s) who will attempt to break an existing system by trying out common vulnerabilities and report if and how they managed to penetrate the system.</p>
 						<p><strong>Methodology for Pen Testing</strong> this can be broken down into a five step plan.</p>
 						<p><strong>1 - Information Gathering</strong> this covers a range of open source research that might include examining web sites, social media or public records. None of this stage involves any hacking.</p>
 						<p><strong>2 - Enumeration/Scanning</strong> an investigation of applications and services that are running on the target system.</p>
@@ -97,17 +99,15 @@
 						<p>This covered a range of tools that are all part of the pen tested toolbox that helped provide access to the machine starting with just an IP address, more info on the tools I encountered will be found in the various links.</p>
 					</section>
 				
-				
-				
 				<!-- Four -->
 					<section id="four">
 						<h2>Defence Analysis (session 3)</h2>
-						<p><strong>SIEM -</strong> a Security Information and Event Management system, a software solution that provides collection of a vast amount of data from multipul sources within an environment in real time.</p>
-						<p><strong>Kill Chain -</strong> the Lockheed Martin's kill chain to break down an attack and report it. The steps taken in an attack can be seen to follow these steps: Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control and Actions on Objectives.</p>
-						<p><strong>Splunk -</strong> an industry standard SIEM's tool. The first thing to grasp is that the vast amount of data comes from a wide varriety of logs and the data needs to made into a format that we can search across all the data regardless of its source Splunk adds a standard header to each record to help with this process.</p>
+						<p>Here we will start to look at the methods of defence that are available.</p>
+						<p><strong>SIEM -</strong> a Security Information and Event Management system, a software solution that is capable of collecting the vast amount of data from multipul sources within an environment in real time.</p>
+						<p><strong>Kill Chain -</strong> the Lockheed Martin's kill chain is considered as a way to break down an attack and report it. The steps taken in an attack can be seen to follow these steps: Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control and Actions on Objectives.</p>
+						<p><strong><a href "splunk.html">Splunk</a> -</strong> an industry standard SIEM's tool. The first thing to grasp is that the vast amount of data comes from a wide varriety of logs and the data needs to made into a format that we can search across all the data regardless of its source Splunk adds a standard header to each record to help with this process.</p>
+						<p><strong>Splunk provides a range of methods for searching this data and exploring what is taking place. Dashboards can be then set up to show in real time what is happening on the many parts of a bigger system. Searches can also be carried out after an attack has taken place to see what was going on and helping provide solutions to the next level of defence that might be required.</p> 
 					</section>
-				
-
 				
 				<!-- Six -->
 					<section id="six">
@@ -129,8 +129,7 @@
 						<p><strong>Strings -</strong> By looking at the ASCII text strings in a program we can learn something about what it might be doing. Windows has a tool for this "PE Explorer".</p>
 						<p><strong>Dynamic Analysis -</strong> at this point I have not carried out any dynamic analysis.</p>
 					</section>
-				
-				
+						
 			</div>
 
 		<!-- Footer -->
