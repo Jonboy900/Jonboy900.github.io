@@ -35,6 +35,16 @@
 
 				<!-- Two -->
 					<section id="two">
+						<header class="major">
+							<h2>Shells.</h2>
+						</header>
+						<p>A shell is used to interface with a command line environment, when acessing remote systems it is possible to force an application to execute a shell running on the system. We can either force the remote server to send us command line access to a reverse shell or open a port on the server to allow us to execute commands a bind shell.</p>
+						<p><strong>Listeners-</strong> to start a reverse shell listener with netcat on a Linux machine nc -lvnp (port-number), -l = this will be the listener, -v is for verbose output, -n do not reslove host names, -p port spec. For a bind shell we can assume there is already a listener all we need to do is conect to it, nc (target-ip) (chosen-port), </p>
+						<p><strong> -</strong> .</p>
+					</section>
+				
+				<!-- Three -->
+					<section id="three">
 						<h2>Bash Commands</h2>
 						<p><strong>pwd -</strong> displays the current working directory.</p>
 						<p><strong>cd -</strong> change directory allows us to move around the file structure. (/directory_name) moves us down. (..) moves us to the home directory.</p>
