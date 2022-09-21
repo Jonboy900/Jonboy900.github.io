@@ -80,7 +80,30 @@
 						struct name {</br>
 						   int x;</br>
 						   int y; }</br>
-						To give create a variable of type structure we can set it with struct name coord; To address the variable inside a structure we use the dot so coord.x = 10; We can pass a structure to a function draw(coord).</p>
+						To create a variable of type structure we can set it with struct name coord; To address the variable inside a structure we use the dot so coord.x = 10; We can pass a structure to a function draw(coord).</p>
+						<p>Typedefs improve the naming of structures</br>
+						typedef struct {</br>
+						int x;</br>
+						int y;</br>
+						} point;</br>
+						Now we can decare a new variable of type point by saying point p;</p>
+						<p>Lastly We can include pointers in a structure allowing strings to be passed.</p>
+					</section>
+				<!-- Eight -->
+					<section id="eight">
+						<h2>Function arguments by reference</h2>
+						<p>As Functions make copies of the variables and do not reference the original variable but if we pass the pointer to the variable instead we can alter the original variable.</br>
+						void addone(int *n) {</br>
+						(*n)++; }</br>
+						addone(&n); This passes the pointer to n and will add one to the original variable n in the greater scope.</p>
+        					<p>We can pass a pointer to structure and then alter the original variables with the following:</br>
+						void move(point * p) {</br>
+						p->x++; } </p>
+					</section>
+				<!-- Nine -->
+					<section id="nine">
+						<h2>Further C programing</h2>
+						<p>Other topics please see<a href="https://www.learn-c.org">learn-c.org</a> were much of the above explinations were taken from.</p>
         				</section>
 
 			</div>
@@ -89,7 +112,7 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="actions">
-						<li><a href="Cyber.html" class="button">Back</a></li>
+						<li><a href="programming.html" class="button">Back</a></li>
 					</ul>
 				</div>
 			</footer>
