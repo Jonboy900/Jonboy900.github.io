@@ -32,70 +32,56 @@
 					<section id="two">
 						<h2>Basic Structure - hello world</h2>
 						
-				  </section>
+				  	</section>
         
-        <!-- Three -->
+        			<!-- Three -->
 					<section id="three">
 						<h2>Variables</h2>
 						<p>Python does not require you to declare variables before using them, or even to declare the variable type.</br>
 						<strong>a = 7</strong> declares the variable a as an interger because it is given an integer with the value 3.</br>
-						<strong>float a = 4.5</strong> declares the variable a as a float as it recieved a float value 4.5. Or you can use a = float(7).</br>
+						<strong>a = 4.5</strong> declares the variable a as a float as it recieved a float value 4.5. Or you can use a = float(7).</br>
 						<strong>a = "hello"</strong> declares the variable a as a string and it recieved the string value hello.</br>
 						Lists are similar to arrays, <strong>alist = []</strong> alist.append(1) will add a value to alist and a = alist[0] will set a to the value in the first possition in the list.</p>
-          </section>		
+          				</section>		
 				
 				<!-- Four -->
 					<section id="four">
 						<h2>Looping</h2>
-						<p>For loops - <strong>int i; for (i = 0; i < 10; i++) {code block}</strong> this will set the counter i to 0 test if i has reached 10 and increment i so doing the code block 10 times.</p>
-						<p>While loops - <strong>int n = 0; while (n < 10) {code block, followed by n++;}</strong> while this is the same as above we also have some other commands available break; will cause the loop to end and continue; will cause a section to be skipped.</p>
+						<p>For loops - <strong>for a in numbers:></strong> this will iterate through the list numbers setting a to each one in turn.</p>
+						<p>While loops - <strong>n = 0 while n < 10: code block, followed by n += 1</strong> this will loop 10 times.</p>
+						<p>break and continue will work on both types of loop break ending the loop and continue skipping the following statements.</p>
+						<p>else can be used to catch the end of a loop but will not be triggered by a break statement</p>
 							
         				</section>
 
 				<!-- Five -->
 					<section id="five">
 						<h2>Functions</h2>
-						<p>In C functions are simple, they take a number of inputs and return one value or none. A function must be declared before they are used either in a header file or in the begining of the C file.</p>
-						<p>Declaration <strong>int this_function(int incoming_value) {code block with a return var}</strong>. If the function is not ment to return a value the it is declared as a void and no return is required.</p>
+						<p>Functions take a number of inputs and returns one or more values. A function must be declared using the def statementbefore they are used either in a header file or in the begining of the C file.</p>
+						<p>Declaration <strong>def this_function(): code block with a possible return</strong>. If the function is not ment to return a value the it is declared as a void and no return is required.</p>
 						<p>Scope, a function is considered local and when it is complete any variables inside it are lost, however you can add Static to the function.</p>	
         				</section>
 
 				<!-- Six -->
 					<section id="six">
-						<h2>Pointers</h2>
-						<p>Pointers are used to directly point to a part of memory. That part of memory usually holds a variable, we can assign a pointer to a variable by <strong>*pointer_to_var = & var;</strong> we can then increment var with <strong> *pointer_to_var += 1;</strong> and what is stored at *pointer_to_var is increased by one.</p>
+						<h2>Classes and Objects</h2>
+						<p></p>
         				</section>
 				<!-- Seven -->
 					<section id="seven">
-						<h2>Structures</h2>
-						<p>Structures contain a set of variables, a structure needs to be declared before it is used.</br>
-						struct name {</br>
-						   int x;</br>
-						   int y; }</br>
-						To create a variable of type structure we can set it with struct name coord; To address the variable inside a structure we use the dot so coord.x = 10; We can pass a structure to a function draw(coord).</p>
-						<p>Typedefs improve the naming of structures</br>
-						typedef struct {</br>
-						int x;</br>
-						int y;</br>
-						} point;</br>
-						Now we can decare a new variable of type point by saying point p;</p>
-						<p>Lastly We can include pointers in a structure allowing strings to be passed.</p>
+						<h2>Dictionaries</h2>
+						
 					</section>
+
 				<!-- Eight -->
 					<section id="eight">
-						<h2>Function arguments by reference</h2>
-						<p>As Functions make copies of the variables and do not reference the original variable but if we pass the pointer to the variable instead we can alter the original variable.</br>
-						void addone(int *n) {</br>
-						(*n)++; }</br>
-						addone(&n); This passes the pointer to n and will add one to the original variable n in the greater scope.</p>
-        					<p>We can pass a pointer to structure and then alter the original variables with the following:</br>
-						void move(point * p) {</br>
-						p->x++; } </p>
+						<h2>Modules and Packages</h2>
+						
 					</section>
 				<!-- Nine -->
 					<section id="nine">
 						<h2>Further C programing</h2>
-						<p>Other topics please see <a href="https://www.learn-c.org">learn-c.org</a> were much of the above explinations were taken from.</p>
+						<p>Other topics please see <a href="https://www.learnpython.org">learnpython.org</a> were much of the above explinations were taken from.</p>
         				</section>
 
 			</div>
