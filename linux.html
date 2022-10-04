@@ -72,9 +72,11 @@
 					<section id="four">
 						<h2>iptables</h2>
 						<p>iptables is a utility to manage the firewall rules, here are some of the options:</p>
-						<p><strong> iptables -L -n -v </strong> this Lists the rules in a number format in the environment</p>
-						<p><strong> iptables -A INPUT -s 10.10.10.10 -j DROP </strong> this will block a specified IP addess.</p>
-						<p><strong> iptables -D INPUT -s 10.10.10.10 -j DROP </stong> this will unblock the specified IP address.</p>
+						<p><strong> iptables -L -n -v </strong> - this Lists the rules in a number format in the environment</p>
+						<p><strong> iptables -A INPUT -s 10.10.10.10 -j DROP </strong> - this will block a specified IP addess.</p>
+						<p><strong> iptables -D INPUT -s 10.10.10.10 -j DROP </strong> - this will unblock the specified IP address.</p>
+						<p><strong> iptables -A OUTPUT -p tcp --dport 80 -j DROP </strong> - this will block our outgoing port no 80.</p>
+						<p><strong> iptables -A INPUT -p tcp --dport 80 -j ACCEPT </strong> - this will blocking incoming traffic on port no 80.</p>
 					</section>
 			</div>
 
