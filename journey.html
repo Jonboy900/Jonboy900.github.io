@@ -29,8 +29,8 @@
 						</header>
 					</section>
 
-				<!-- Seven -->
-					<section id="seven">
+				<!-- Two -->
+					<section id="two">
 						<h2>Information Risk Management</h2>
 						<p><strong>Cyber Security -</strong> To start with I want to try and define what Cyber Security means. Protecting ourselves against potential threats and examining what it is we are trying to defend. We will need to understand the rules and regulations that we need to abide by to ensure that we are carrying out our obligations to protect the data we hold.</p>
 						<p><strong>CIA -</strong> the principles of - Confidentiality - data should be protected from unauthorized access or misuse. Integrity - data must not be altered by unauthorized people. Availability - the data should be available when authorized users want to use it.
@@ -43,8 +43,8 @@
 						<p><strong>ISO 2700 -</strong> the International Organization for Standardization provides a range of accreditation for cyber security we are most interested in the 27000 family. The family contains 27001 which is an auditable section.</p>
 					</section>
 
-				<!-- Five -->
-					<section id="five">
+				<!-- Three -->
+					<section id="three">
 						<h2>Common Vulnerabilities</h2>
 						<p><strong>Identifiyed and defined - </strong> now that we have some idea of what we are trying to defend we can examine some of the threats in this case we will look specifically at some of the vulnerabilities that have been exploited in the past. Previous vulnerabilities have been recorded and identified note this approach does not cover 'zero day' threats but provides a framework for analysising a system exposure to existing threats.</p> 
 						<p><strong>CVE's -</strong> Common Vulnerabilities and Exposures. A single unique identifier for a vulnerability these are used by a number of organisation and details the common knowledge about a vulnerability. <a href="metasploit.html">Metasploit</a> the framework for searching and using CVE's. Metasploit is split in to several modules: to look at a system for a weakness, exploit that weakness, modify an attack to hide it. Given a CVE number you can search Metasploit to look at the vulnerability and gain information on the exploit and even how successful the exploit has been. The strength of Metasploit is to link all the elements together so while running a system scam using Nmap within Metasploit the data will populate the Metasploit database looking up exploits as we see the system data.</p>
@@ -57,8 +57,8 @@
 						<p>So to defend this system we would need to look at all the existing exploits that already exist.</p>
 					</section>
 				
-				<!-- Three -->
-					<section id="three">
+				<!-- Four -->
+					<section id="four">
 						<h2>Web Application Security</h2>
 						<p><strong>Networking -</strong> To explore some of these Security Risks it is worth recapping the some network principles the Open System Interconnection Model see the <a href="osi.html">OSI page.</a> 	
 						<p><strong>IP Addressing -</strong> For the internet addressing it is also worth covering some of the <a href="ip.html">Internet Protocols.</a></p> 
@@ -72,8 +72,8 @@
 						<p><strong>Cross Site Scripting -</strong> This looks running our code on a report machine. There are three different types of XSS attacks, DOM, Persistent and Reflected. DOM uses the HTML environment to execute code, we need somewhere to insert this code and a search bar might be an obvious option, without the correct input sanitation we can get the code snippet run, even if the frontend of the server did the cleaning we could bypass that with Burp so that the code is still presented to the backend and if that failed to check what it was presented with we can get our code to operate. Persistent XSS will take what we have done in the DOM and make it exist on the server, we need to find somewhere to store that code on the server side, using the Brup interceptor again we will capture a logout request and store our code snippet in the last IP address and get our code installed on the web server. Reflective XXS, I need to do some more work on this one!</p>
 					</section>
 				
-				<!-- Two -->
-					<section id="two">
+				<!-- Five -->
+					<section id="five">
 						<h2>Penetration Testing</h2>
 						<p>A dedicated tester(s) who will attempt to break an existing system by trying out common vulnerabilities and report if and how they managed to penetrate the system.</p>
 						<p><strong>Methodology for Pen Testing</strong> this can be broken down into a five step plan.</p>
@@ -98,8 +98,8 @@
 						<p>This covered a range of tools that are all part of the pen tested toolbox that helped provide access to the machine starting with just an IP address, more info on the tools I encountered will be found in the various links.</p>
 					</section>
 				
-				<!-- Four -->
-					<section id="four">
+				<!-- Six -->
+					<section id="six">
 						<h2>Defence Analysis</h2>
 						<p>Here I have started to look at the methods of defence that are available, first a few terms need defining.</p>
 						<p><strong>SIEM -</strong> a Security Information and Event Management system, a software solution that is capable of collecting the vast amount of data from multipul sources within an environment in real time.</p>
@@ -109,8 +109,8 @@
 						<p>Splunk provides a range of methods for searching this data and exploring what is taking place. Dashboards can be then set up to show in real time what is happening on the many parts of a bigger system. Searches can also be carried out after an attack has taken place to see what was going on and helping provide solutions to the next level of defence that might be required.</p> 
 					</section>
 				
-				<!-- Six -->
-					<section id="six">
+				<!-- Seven -->
+					<section id="seven">
 						<h2>Malware Analysis</h2>
 						<p><strong>File analysis -</strong> Examining malware to see what it is doing. We might have identified a file that is suspicious and without running it what can we find out.</p>
 						<p>Understanding malware this can be broken down into two main categories targeted and mass campaigns. Stuxnet was spread far and wide looking like a mass campaigns however it was looking for a particular device in Iran only fired its payload when it found that system. Wannacry was an example of a wide spread attack using the eternal blue exploit.</p>
@@ -130,8 +130,8 @@
 						<p><strong>Dynamic Analysis -</strong> at this point I have not carried out any dynamic analysis.</p>
 					</section>
 						
-				<!-- Seven-->
-					<section id="seven">
+				<!-- Eight-->
+					<section id="eight">
 						<h2>Learning Places</h2>
 						<p><strong>University of the West of England -</strong> Current Boot Camp Course.<br /><img src="images/Cyber Security Bootcamp.jpg" alt="" width ="131" height="185"></p>
 						<p><strong>TryHackMe -</strong> In depth learning place for Cyber skills. A vast number of virtual rooms where you can practice and test your skills in safety.<br /><img src="images/THM-HCQDZE5WH0.png" alt="" width ="185" height="131"> xxx <img src="images/THM-XJLHE9TEHB.png" alt="" width ="185" height="131"></p>
@@ -140,8 +140,8 @@
 						<p><strong>Open University -</strong> Courses including a couple on Cyber Security.<br /><img src="images/cyber security intro.jpg" alt="" width ="131" height="185"> xxx <img src="images/cyber security incidents.jpg" alt="" width ="131" height="185"></p>
 					</section>
 				
-				<!-- Eight-->
-					<section id="eight">
+				<!-- Nine-->
+					<section id="nine">
 						<h2>Cyber Security Tech ref.</h2>
 						
 						<p>More details on some of the concepts/tools/resources used in cyber security.</p>
