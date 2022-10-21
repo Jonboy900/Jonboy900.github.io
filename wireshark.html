@@ -49,7 +49,12 @@
 					<section id="four">
 						<h2>Exploring a packet</h2>
 						<p>Each line in wireshark represents a packet, each one will contain details, open by clicking on the small down arrow? This exposes the the layers of the <a href="osi.html">OSI model</a>.</p>
-						<p></p>
+						<p>ARP traffic - Address Resolution Protocol a layer 2 protocol that is used to connect IP addresses with MAC addresses. The message type can be Request (1) or Reply (2).</p>
+						<p>ICMP traffic - Internet Control Message Protocol used with ping and traceroute. Type 8 is a request and type 0 reply packet.<p>
+						<p>TCP traffic - Transmission Control Protocol handles the delivery of packets and includes sequencing and errors, TCP sends a lot of traffic so it may be necessary to futher filter the results. Common packets might be the 3 way handshake SYN SYNACK ACK.<p>
+						<p>DNS traffic - Domain Name Service protocol is used to resolve names with IP addresses, these will be query or response.</p>
+						<p>HTTP traffic - Hypertext Transfer Protocol is a commonly used port for the www. HTTP is used to send GET and POST requests to a web server, useful data includes Request URI, File Data and Server. Using Statistics>Protocol Hierarchy to display</p>
+						<p>HTTPS traffic - Hypertext Transfer Protocol Secure - as the name suggests this is secure that means that the data is encrypted however before sending encrypted data the client and server need to agree upon a series of steps: Protocol version, crypo algorithm as well as creating the secure tunnel with a public key, all of this has to be done without the encryption.</p>
 					</section>
 
 		<!-- Footer -->
